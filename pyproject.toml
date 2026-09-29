@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentfileclear"
+version = "0.1.0"
+description = "扫描本机智能体残留，隔离到回收站，并按原路径恢复"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+keywords = ["cli", "agent", "cleanup", "cache"]
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "pydantic-ai-slim>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/qunxiong-lin/agentfileclear"
+Repository = "https://github.com/qunxiong-lin/agentfileclear"
+Issues = "https://github.com/qunxiong-lin/agentfileclear/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+agentclear = "agentfileclear.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

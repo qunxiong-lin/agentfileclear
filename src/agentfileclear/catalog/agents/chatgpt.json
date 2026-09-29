@@ -1,0 +1,18 @@
+{
+  "id": "chatgpt",
+  "name": "ChatGPT 桌面端",
+  "roots": [
+    {
+      "os": ["darwin"],
+      "path": "{app_support}/com.openai.chat",
+      "emit_unmatched": true,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/ChatGPT",
+      "emit_unmatched": true,
+      "preset": "electron_app"
+    }
+  ]
+}

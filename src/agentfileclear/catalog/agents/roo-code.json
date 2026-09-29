@@ -1,0 +1,36 @@
+{
+  "id": "roo-code",
+  "name": "Roo Code",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.roo",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tasks", "category": "session"},
+        {"glob": "settings", "category": "config"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/rooveterinaryinc.roo-cline",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tasks", "category": "session"},
+        {"glob": "settings", "category": "config"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Cursor/User/globalStorage/rooveterinaryinc.roo-cline",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tasks", "category": "session"},
+        {"glob": "settings", "category": "config"}
+      ]
+    }
+  ]
+}

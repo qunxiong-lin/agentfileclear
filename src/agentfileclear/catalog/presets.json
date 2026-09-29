@@ -1,0 +1,23 @@
+{
+  "electron_app": [
+    {"glob": "Cache", "category": "cache"},
+    {"glob": "Code Cache", "category": "cache"},
+    {"glob": "GPUCache", "category": "cache"},
+    {"glob": "DawnGraphiteCache", "category": "cache"},
+    {"glob": "DawnWebGPUCache", "category": "cache"},
+    {"glob": "CachedData", "category": "cache"},
+    {"glob": "CachedProfilesData", "category": "cache"},
+    {"glob": "CachedExtensionVSIXs", "category": "extension_cache"},
+    {"glob": "Service Worker", "category": "cache"},
+    {"glob": "blob_storage", "category": "cache"},
+    {"glob": "logs", "category": "log"},
+    {"glob": "Crashpad", "category": "log"},
+    {"glob": "Backups", "category": "backup"},
+    {"glob": "Cookies", "category": "secret"},
+    {"glob": "Cookies-journal", "category": "secret"},
+    {"glob": "User", "category": "config"},
+    {"glob": "Local Storage", "category": "user_data"},
+    {"glob": "Session Storage", "category": "user_data"},
+    {"glob": "IndexedDB", "category": "user_data"}
+  ]
+}

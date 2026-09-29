@@ -1,0 +1,15 @@
+{
+  "id": "aider",
+  "name": "Aider",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.aider",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "caches", "category": "cache"},
+        {"glob": "analytics", "category": "telemetry"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "warp",
+  "name": "Warp",
+  "roots": [
+    {
+      "os": ["darwin"],
+      "path": "{app_support}/dev.warp.Warp-Stable",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["linux"],
+      "path": "{data_home}/warp-terminal",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["linux"],
+      "path": "{app_support}/warp-terminal",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["win32"],
+      "path": "{data_home}/warp",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["win32"],
+      "path": "{app_support}/dev.warp.Warp-Stable",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.warp",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    }
+  ]
+}

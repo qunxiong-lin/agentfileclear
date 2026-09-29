@@ -1,0 +1,25 @@
+{
+  "id": "amp",
+  "name": "Amp",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.amp",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"},
+        {"glob": "sessions", "category": "session"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/amp",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "opencode",
+  "name": "OpenCode",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.opencode",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "log", "category": "log"},
+        {"glob": "snapshots", "category": "backup"}
+      ]
+    },
+    {
+      "os": ["linux", "win32"],
+      "path": "{data_home}/opencode",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "log", "category": "log"},
+        {"glob": "snapshot", "category": "backup"}
+      ]
+    },
+    {
+      "os": ["darwin", "win32"],
+      "path": "{app_support}/opencode",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "log", "category": "log"},
+        {"glob": "snapshot", "category": "backup"}
+      ]
+    }
+  ]
+}

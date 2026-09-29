@@ -1,0 +1,22 @@
+{
+  "id": "kiro",
+  "name": "Kiro",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Kiro",
+      "emit_unmatched": true,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.kiro",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"},
+        {"glob": "sessions", "category": "session"}
+      ]
+    }
+  ]
+}

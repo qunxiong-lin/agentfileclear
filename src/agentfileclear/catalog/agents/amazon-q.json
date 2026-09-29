@@ -1,0 +1,34 @@
+{
+  "id": "amazon-q",
+  "name": "Amazon Q",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.aws/amazonq",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "history", "category": "session"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/amazon-q",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["linux", "win32"],
+      "path": "{data_home}/amazon-q",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    }
+  ]
+}

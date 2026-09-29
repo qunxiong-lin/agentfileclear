@@ -1,0 +1,48 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Cursor",
+      "emit_unmatched": false,
+      "rules": [
+        {"glob": "Cache", "category": "cache", "description": "HTTP 缓存，下次启动会重新生成"},
+        {"glob": "GPUCache", "category": "cache", "description": "GPU 缓存，下次启动会重新生成"},
+        {"glob": "Code Cache", "category": "cache", "description": "脚本编译缓存，下次启动会重新生成"},
+        {"glob": "DawnGraphiteCache", "category": "cache", "description": "图形缓存，下次启动会重新生成"},
+        {"glob": "DawnWebGPUCache", "category": "cache", "description": "图形缓存，下次启动会重新生成"},
+        {"glob": "CachedData", "category": "cache", "match": "stale_versions", "description": "按版本存放的编辑器资源。只清理旧版本，最新一份留下"},
+        {"glob": "CachedExtensionVSIXs", "category": "extension_cache", "description": "已下载的扩展安装包。已经装上的扩展不动"},
+        {"glob": "logs", "category": "log", "description": "主程序运行日志"},
+        {"glob": "Crashpad", "category": "log", "description": "崩溃转储"},
+        {"glob": "sentry", "category": "telemetry", "description": "错误上报留下的本地缓存"},
+        {"glob": "User/globalStorage/state.vscdb.backup", "category": "backup", "risk": "optional", "description": "状态库备份。主库不清理，默认保留"},
+        {"glob": "User/settings.json", "category": "config", "risk": "protected", "description": "用户设置"},
+        {"glob": "User/keybindings.json", "category": "config", "risk": "protected", "description": "快捷键"},
+        {"glob": "User/snippets", "category": "user_data", "risk": "protected", "description": "代码片段"},
+        {"glob": "User/globalStorage/state.vscdb", "category": "user_data", "risk": "protected", "description": "主状态库"},
+        {"glob": "User/globalStorage/state.vscdb-shm", "category": "user_data", "risk": "protected", "description": "主状态库的共享内存文件"},
+        {"glob": "User/globalStorage/state.vscdb-wal", "category": "user_data", "risk": "protected", "description": "主状态库的预写日志"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.cursor",
+      "emit_unmatched": false,
+      "rules": [
+        {"glob": "logs", "category": "log", "description": "连接和调试日志"},
+        {"glob": "projects/*/agent-tools", "category": "cache", "risk": "optional", "description": "各项目里工具写出的临时文本，默认保留"},
+        {"glob": "projects/*/terminals", "category": "log", "risk": "optional", "description": "各项目的终端输出快照，默认保留"},
+        {"glob": "projects/*/mcps", "category": "cache", "description": "各项目缓存的工具描述，连接时会重新拉取"},
+        {"glob": "projects/*/agent-transcripts", "category": "session", "risk": "optional", "description": "各项目的对话记录，默认保留"},
+        {"glob": "argv.json", "category": "config", "risk": "protected", "description": "启动参数"},
+        {"glob": "mcp.json", "category": "secret", "risk": "protected", "description": "MCP 配置"},
+        {"glob": "agents", "category": "user_data", "risk": "protected", "description": "自定义代理"},
+        {"glob": "plans", "category": "user_data", "risk": "protected", "description": "计划"},
+        {"glob": "skills", "category": "user_data", "risk": "protected", "description": "技能"},
+        {"glob": "skills-cursor", "category": "user_data", "risk": "protected", "description": "Cursor 自带技能"}
+      ]
+    }
+  ]
+}

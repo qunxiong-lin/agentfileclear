@@ -1,0 +1,33 @@
+{
+  "id": "lingma",
+  "name": "通义灵码",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.lingma",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"},
+        {"glob": "index", "category": "cache"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{cache_home}/lingma",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/Alibaba-Cloud.tongyi-lingma",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"}
+      ]
+    }
+  ]
+}

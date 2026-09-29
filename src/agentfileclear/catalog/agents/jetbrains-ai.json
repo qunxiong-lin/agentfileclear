@@ -1,0 +1,41 @@
+{
+  "id": "jetbrains-ai",
+  "name": "JetBrains AI / Junie",
+  "roots": [
+    {
+      "os": ["darwin", "win32"],
+      "path": "{app_support}/JetBrains",
+      "emit_unmatched": false,
+      "rules": [
+        {"glob": "*/junie", "category": "user_data"},
+        {"glob": "*/github-copilot", "category": "extension_cache"}
+      ]
+    },
+    {
+      "os": ["linux", "win32"],
+      "path": "{data_home}/JetBrains",
+      "emit_unmatched": false,
+      "rules": [
+        {"glob": "*/junie", "category": "user_data"},
+        {"glob": "*/github-copilot", "category": "extension_cache"}
+      ]
+    },
+    {
+      "os": ["linux"],
+      "path": "{app_support}/JetBrains",
+      "emit_unmatched": false,
+      "rules": [
+        {"glob": "*/junie", "category": "user_data"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.junie",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    }
+  ]
+}

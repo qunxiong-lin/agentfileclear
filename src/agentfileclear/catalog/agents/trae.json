@@ -1,0 +1,22 @@
+{
+  "id": "trae",
+  "name": "Trae",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Trae",
+      "emit_unmatched": true,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.trae",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"},
+        {"glob": "extensions", "category": "extension_cache"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "comate",
+  "name": "文心 Comate",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.comate",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.baidu-comate",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/BaiduComate.comate",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"}
+      ]
+    }
+  ]
+}

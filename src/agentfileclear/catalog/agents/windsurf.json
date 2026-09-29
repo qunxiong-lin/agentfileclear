@@ -1,0 +1,41 @@
+{
+  "id": "windsurf",
+  "name": "Windsurf",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.windsurf",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"},
+        {"glob": "extensions", "category": "extension_cache"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Windsurf",
+      "emit_unmatched": true,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.codeium",
+      "emit_unmatched": false,
+      "rules": [
+        {"glob": "code_tracker", "category": "cache", "description": "本地代码追踪索引，下次使用会重建"},
+        {"glob": "context_state", "category": "cache", "description": "上下文索引状态，下次使用会重建"},
+        {"glob": "database", "category": "cache", "risk": "optional", "description": "本地数据库，可能含索引以外的状态，默认保留"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.codeium/windsurf",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    }
+  ]
+}

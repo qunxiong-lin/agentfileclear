@@ -1,0 +1,40 @@
+{
+  "id": "codex",
+  "name": "Codex",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.codex",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "auth.json", "category": "secret"},
+        {"glob": "config.toml", "category": "config"},
+        {"glob": "sessions", "category": "session", "risk": "optional", "description": "对话记录，默认保留"},
+        {"glob": "archived_sessions", "category": "session", "risk": "optional", "description": "已归档对话，默认保留"},
+        {"glob": "history.jsonl", "category": "session", "risk": "optional", "description": "命令历史，默认保留"},
+        {"glob": "session_index.jsonl", "category": "session", "risk": "optional", "description": "会话索引，默认保留"},
+        {"glob": "shell_snapshots", "category": "backup"},
+        {"glob": ".tmp", "category": "cache"},
+        {"glob": "tmp", "category": "cache", "description": "临时文件"},
+        {"glob": "thread-writer-locks", "category": "cache", "description": "会话写入锁，进程结束后可清理"},
+        {"glob": "plugins/cache", "category": "cache", "description": "插件下载缓存，下次使用会重新拉取"},
+        {"glob": "plugins/.plugin-appserver", "category": "cache", "description": "插件运行时缓存，下次使用会重新拉取"},
+        {"glob": "cc-switch-model-catalog.json", "category": "cache", "description": "模型目录缓存"},
+        {"glob": "logs_*.sqlite", "category": "log", "description": "本地运行日志库"},
+        {"glob": "logs_*.sqlite-wal", "category": "log", "description": "运行日志库的预写日志"},
+        {"glob": "logs_*.sqlite-shm", "category": "log", "description": "运行日志库的共享内存"},
+        {"glob": "attachments", "category": "user_data"},
+        {"glob": "log", "category": "log"},
+        {"glob": ".codex-global-state.json.bak", "category": "backup", "risk": "optional", "description": "全局状态备份，默认保留"},
+        {"glob": ".codex-global-state.json", "category": "config", "risk": "protected", "description": "全局状态"},
+        {"glob": "computer-use", "category": "user_data", "risk": "protected", "description": "Computer Use 辅助程序，不清理"},
+        {"glob": "skills", "category": "user_data", "risk": "protected", "description": "技能"},
+        {"glob": "state_*.sqlite", "category": "user_data", "risk": "protected", "description": "应用状态库"},
+        {"glob": "memories_*.sqlite", "category": "user_data", "risk": "protected", "description": "记忆库"},
+        {"glob": "goals_*.sqlite", "category": "user_data", "risk": "protected", "description": "目标库"},
+        {"glob": "queue_*.sqlite", "category": "user_data", "risk": "protected", "description": "任务队列库"},
+        {"glob": "thread_history_*.sqlite", "category": "user_data", "risk": "protected", "description": "线程历史库"}
+      ]
+    }
+  ]
+}

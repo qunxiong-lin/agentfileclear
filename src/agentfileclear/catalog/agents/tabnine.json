@@ -1,0 +1,23 @@
+{
+  "id": "tabnine",
+  "name": "Tabnine",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.tabnine",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "models", "category": "user_data"},
+        {"glob": "binaries", "category": "extension_cache"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.config/TabNine",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "tabnine.model", "category": "user_data"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "gemini-cli",
+  "name": "Gemini CLI",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.gemini",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tmp", "category": "cache"},
+        {"glob": "settings.json", "category": "config"},
+        {"glob": "google_accounts.json", "category": "secret"},
+        {"glob": "oauth_creds.json", "category": "secret"}
+      ]
+    }
+  ]
+}

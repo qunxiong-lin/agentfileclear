@@ -1,0 +1,36 @@
+{
+  "id": "cline",
+  "name": "Cline",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.cline",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tasks", "category": "session"},
+        {"glob": "settings", "category": "config"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/saoudrizwan.claude-dev",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tasks", "category": "session"},
+        {"glob": "settings", "category": "config"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Cursor/User/globalStorage/saoudrizwan.claude-dev",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "tasks", "category": "session"},
+        {"glob": "settings", "category": "config"}
+      ]
+    }
+  ]
+}

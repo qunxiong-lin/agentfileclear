@@ -1,0 +1,31 @@
+{
+  "id": "augment",
+  "name": "Augment",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.augment",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/augment.vscode-augment",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Cursor/User/globalStorage/augment.vscode-augment",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"}
+      ]
+    }
+  ]
+}

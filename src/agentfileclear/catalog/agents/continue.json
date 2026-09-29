@@ -1,0 +1,19 @@
+{
+  "id": "continue",
+  "name": "Continue",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.continue",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "sessions", "category": "session"},
+        {"glob": "index", "category": "cache"},
+        {"glob": ".continuerc.json", "category": "config"},
+        {"glob": "config.json", "category": "config"},
+        {"glob": "config.ts", "category": "config"},
+        {"glob": "skills", "category": "user_data"}
+      ]
+    }
+  ]
+}

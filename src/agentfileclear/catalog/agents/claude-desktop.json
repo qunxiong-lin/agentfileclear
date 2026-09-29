@@ -1,0 +1,12 @@
+{
+  "id": "claude-desktop",
+  "name": "Claude 桌面端",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Claude",
+      "emit_unmatched": true,
+      "preset": "electron_app"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cody",
+  "name": "Sourcegraph Cody",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.cody",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.sourcegraph",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/sourcegraph.cody-ai",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "zed",
+  "name": "Zed",
+  "roots": [
+    {
+      "os": ["darwin", "win32"],
+      "path": "{app_support}/Zed",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["linux"],
+      "path": "{data_home}/zed",
+      "emit_unmatched": false,
+      "preset": "electron_app"
+    },
+    {
+      "os": ["darwin"],
+      "path": "{home}/.config/zed",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "settings.json", "category": "config"}
+      ]
+    },
+    {
+      "os": ["linux"],
+      "path": "{app_support}/zed",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "settings.json", "category": "config"}
+      ]
+    }
+  ]
+}

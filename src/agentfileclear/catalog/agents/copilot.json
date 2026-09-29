@@ -1,0 +1,48 @@
+{
+  "id": "copilot",
+  "name": "GitHub Copilot",
+  "roots": [
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{home}/.copilot",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "logs", "category": "log"},
+        {"glob": "session-store.db", "category": "session"},
+        {"glob": "session-store.db-shm", "category": "session"},
+        {"glob": "session-store.db-wal", "category": "session"},
+        {"glob": "session-state", "category": "session"},
+        {"glob": "command-history-state.json", "category": "session"},
+        {"glob": "vscode.session.metadata.cache.json", "category": "cache"},
+        {"glob": "config.json", "category": "config"},
+        {"glob": "ide", "category": "user_data"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/github.copilot-chat",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Code/User/globalStorage/github.copilot",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"}
+      ]
+    },
+    {
+      "os": ["darwin", "linux", "win32"],
+      "path": "{app_support}/Cursor/User/globalStorage/github.copilot-chat",
+      "emit_unmatched": true,
+      "rules": [
+        {"glob": "cache", "category": "cache"},
+        {"glob": "logs", "category": "log"}
+      ]
+    }
+  ]
+}
